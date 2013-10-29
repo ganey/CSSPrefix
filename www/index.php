@@ -61,7 +61,7 @@ if ($prefix && $css) {
 			</div>
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="/">Home</a></li>
 					<li><a href="http://www.italic.fr/contact/" target="_blank">Contact</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
