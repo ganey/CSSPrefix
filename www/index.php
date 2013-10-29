@@ -24,13 +24,14 @@ if ($prefix && $css) {
 	$prefixedCss = implode("}\n", $parts);
 	$lines = substr_count($prefixedCss, "\n");
 }
+
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="One-click add your own #prefix or .prefix to your stylesheet, for free.">
-	<meta name="author" content="www.italic.fr">
+	<meta name="author" content="http://www.italic.fr">
 	<link rel="shortcut icon" href="assets/ico/favicon.png">
 
 	<title>Online prefix CSS rules and class names</title>
@@ -72,8 +73,8 @@ if ($prefix && $css) {
 
 		<div class="starter-template">
 			<h1>Batch add any prefix to your CSS rules and class names!</h1>
-			<p class="lead">From this: <code>body, a, #wrapper, div.block {...</code></p>
-			<p class="lead">To this: <code>#prefix body, #prefix a, #prefix #wrapper, #prefix div.block {...</code></p>
+			<p class="lead">Turn this: <code>body, a, #wrapper, div.block {...</code></p>
+			<p class="lead">into this: <code>#prefix body, #prefix a, #prefix #wrapper, #prefix div.block {...</code></p>
 		</div>
 
 		<form role="form" action="/" method="post">
@@ -101,14 +102,11 @@ if ($prefix && $css) {
 		<h1>You’re welcome.</h1>
 		<br>
 		<br>
+		<small><a href="http://www.italic.fr" target="_blank">This is yet another <em>italic</em> production.</a></small>
+		<br>
+		<br>
 
 	</div><!-- /.container -->
 
-
-	<!-- Bootstrap core JavaScript
-	================================================== -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="assets/js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
