@@ -13,12 +13,31 @@ if ($prefix && $css) {
 			continue;
 		}
 
-		$subParts = explode(',', $part);
-		foreach ($subParts as &$subPart) {
-			$subPart = $prefix . ' ' . trim($subPart);
+		$comments = explode("*/", $part);
+		foreach ($comments as &$comment) {
+			
+			$subParts = explode(',', $comment);
+			foreach ($subParts as &$subPart) {
+				// vérifier que c'est une classe ou un id
+				//echo $subPart.' => '.substr(trim($subPart), 0, 1).'<br>';
+				if (substr(trim($subPart), 0, 1) == '.') {
+					$subPart = $prefix . ' ' . trim($subPart);
+				} 
+
+				if (substr(trim($subPart), 0, 1) == '#') {
+					//echo $subPart.' => '.substr(trim($subPart), 0, 1).'<br>';
+					//echo '----> '.substr(trim($subPart), 0, 7).'<br>';
+					// vérifier que ce n'est pas une couleur
+					if (!preg_match('/^#[a-f0-9]{6}$/i', substr(trim($subPart), 0, 7))) {
+						//echo 'couleur : '.$subPart.'<br><br>';
+						$subPart = $prefix . ' ' . trim($subPart);
+					}
+				}
+			}
+			$comment = implode(', ', $subParts);
 		}
 
-		$part = implode(', ', $subParts);
+		$part = implode("*/\n", $comments);
 	}
 
 	$prefixedCss = implode("}\n", $parts);
