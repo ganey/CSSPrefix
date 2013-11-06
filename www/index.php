@@ -2,6 +2,7 @@
 
 $prefix = isset($_POST['prefix']) ? $_POST['prefix'] : '';
 $css = isset($_POST['css']) ? $_POST['css'] : '';
+$spacer = isset($_POST['spacer']) ? $_POST['spacer'] : '';
 $lines = 10;
 
 $prefixedCss = '';
@@ -21,16 +22,16 @@ if ($prefix && $css) {
 				// vérifier que c'est une classe ou un id
 				//echo $subPart.' => '.substr(trim($subPart), 0, 1).'<br>';
 				if (substr(trim($subPart), 0, 1) == '.') {
-					$subPart = $prefix . ' ' . trim($subPart);
+					$subPart = $prefix . $spacer . trim($subPart);
 				} 
 
-				if (substr(trim($subPart), 0, 1) == '#') {
+				elseif (substr(trim($subPart), 0, 1) == '#') {
 					//echo $subPart.' => '.substr(trim($subPart), 0, 1).'<br>';
 					//echo '----> '.substr(trim($subPart), 0, 7).'<br>';
 					// vérifier que ce n'est pas une couleur
 					if (!preg_match('/^#[a-f0-9]{6}$/i', substr(trim($subPart), 0, 7))) {
 						//echo 'couleur : '.$subPart.'<br><br>';
-						$subPart = $prefix . ' ' . trim($subPart);
+						$subPart = $prefix . $spacer . trim($subPart);
 					}
 				}
 			}
@@ -101,10 +102,14 @@ if ($prefix && $css) {
 				<label for="prefix">Prefix:</label><br>
 				<input type="text" name="prefix" id="prefix" placeholder="#some_id or .some_class" class="form-control input-lg" value="<?php echo $prefix ?>" />
 			</div>
+			<div class="form-group">
+				<label for="spacer">Spacer:</label><br>
+				<input type="text" name="spacer" id="spacer" placeholder="space or dash or underscore or nothing" class="form-control input-lg" value="<?php echo $spacer ?>" />
+			</div>
 
 			<div class="form-group">
 				<label for="css">Copy/paste stylesheet below:</label><br>
-				<textarea name="css" id="css" cols="80" rows="10" class="form-control input-lg" placeholder="html, body, a, img, p, span, h2 { margin: 0; padding: 0; }"><?php echo $css ?></textarea>
+				<textarea name="css" id="css" cols="80" rows="10" class="form-control input-lg" placeholder="#id, .class { margin: 0; padding: 0; }"><?php echo $css ?></textarea>
 			</div>
 
 			<button type="submit" class="btn btn-primary btn-lg">Run the prefixer!</button>
