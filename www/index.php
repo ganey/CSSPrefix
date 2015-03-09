@@ -22,21 +22,21 @@ if ($prefix && $css) {
 				// vérifier que c'est une classe ou un id
 				//echo $subPart.' => '.substr(trim($subPart), 0, 1).'<br>';
 				if (substr(trim($subPart), 0, 1) == '.') {
-					$subPart = $prefix . $spacer . trim($subPart);
+					$subPart = $prefix . $spacer . ($subPart);
 				} 
 
 				elseif (substr(trim($subPart), 0, 1) == '#') {
 					//echo $subPart.' => '.substr(trim($subPart), 0, 1).'<br>';
 					//echo '----> '.substr(trim($subPart), 0, 7).'<br>';
 					// vérifier que ce n'est pas une couleur
-					if (!preg_match('/^#[a-f0-9]{6}$/i', substr(trim($subPart), 0, 7))) {
+					if (!preg_match('/^#[a-f0-9]{6}$/i', substr(($subPart), 0, 7))) {
 						//echo 'couleur : '.$subPart.'<br><br>';
-						$subPart = $prefix . $spacer . trim($subPart);
+						$subPart = $prefix . $spacer . ($subPart);
 					}
 				}
 
 				else {
-					$subPart = $prefix . $spacer . trim($subPart);
+					$subPart = $prefix . $spacer . ($subPart);
 				}
 			}
 			$comment = implode(', ', $subParts);
