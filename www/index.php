@@ -34,6 +34,10 @@ if ($prefix && $css) {
 						$subPart = $prefix . $spacer . trim($subPart);
 					}
 				}
+
+				else {
+					$subPart = $prefix . $spacer . trim($subPart);
+				}
 			}
 			$comment = implode(', ', $subParts);
 		}
