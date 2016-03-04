@@ -74,6 +74,7 @@ if ($prefix && $css) {
 </head>
 
 <body>
+	<a href="https://github.com/italic"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -124,17 +125,26 @@ if ($prefix && $css) {
 		<br>
 		<label for="css">Here is your prefixed CSS:</label><br>
 		<textarea name="css" id="css" cols="80" rows="<?php echo $lines+10 ?>" class="form-control input-lg"><?php echo $prefixedCss ?></textarea>
-		
 		<br>
 		<br>
 		<h1>You’re welcome.</h1>
 		<br>
 		<br>
+		<!-- GitHub Watch -->
+		<a class="github-button" href="https://github.com/italic/CSSPrefix" data-icon="octicon-eye" data-style="mega" aria-label="Watch italic/CSSPrefix on GitHub">Watch</a>
 		<small><a href="http://www.italic.fr" target="_blank">This is yet another <em>italic</em> production.</a></small>
+		<!-- GitHub Star -->
+		<a class="github-button" href="https://github.com/italic/CSSPrefix" data-icon="octicon-star" data-style="mega" aria-label="Star italic/CSSPrefix on GitHub">Star</a>
+		<!-- GitHub Fork -->
+		<a class="github-button" href="https://github.com/italic/CSSPrefix/fork" data-icon="octicon-repo-forked" data-style="mega" aria-label="Fork italic/CSSPrefix on GitHub">Fork</a>
+		<!-- GitHub Issue -->
+		<a class="github-button" href="https://github.com/italic/CSSPrefix/issues" data-icon="octicon-issue-opened" data-style="mega" aria-label="Issue italic/CSSPrefix on GitHub">Issue</a>
 		<br>
 		<br>
 
 	</div><!-- /.container -->
+
+	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
