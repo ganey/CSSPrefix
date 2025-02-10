@@ -55,7 +55,6 @@ if ($prefix && $css) {
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="One-click add your own #prefix or .prefix to your stylesheet, for free.">
-	<meta name="author" content="http://www.italic.fr">
 	<link rel="shortcut icon" href="assets/ico/favicon.png">
 
 	<title>Online prefix CSS rules and class names</title>
@@ -74,7 +73,6 @@ if ($prefix && $css) {
 </head>
 
 <body>
-	<a href="https://github.com/italic"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -88,7 +86,6 @@ if ($prefix && $css) {
 			<div class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="/">Home</a></li>
-					<li><a href="http://www.italic.fr/contact/" target="_blank">Contact</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>
@@ -131,32 +128,31 @@ if ($prefix && $css) {
 		<br>
 		<br>
 		<!-- GitHub Watch -->
-		<a class="github-button" href="https://github.com/italic/CSSPrefix" data-icon="octicon-eye" data-style="mega" aria-label="Watch italic/CSSPrefix on GitHub">Watch</a>
+		<a class="github-button" href="https://github.com/ganey/CSSPrefix" data-icon="octicon-eye" data-style="mega" aria-label="Watch italic/CSSPrefix on GitHub">Watch</a>
 		<!-- GitHub Star -->
-		<a class="github-button" href="https://github.com/italic/CSSPrefix" data-icon="octicon-star" data-style="mega" aria-label="Star italic/CSSPrefix on GitHub">Star</a>
+		<a class="github-button" href="https://github.com/ganey/CSSPrefix" data-icon="octicon-star" data-style="mega" aria-label="Star italic/CSSPrefix on GitHub">Star</a>
 		<!-- GitHub Fork -->
-		<a class="github-button" href="https://github.com/italic/CSSPrefix/fork" data-icon="octicon-repo-forked" data-style="mega" aria-label="Fork italic/CSSPrefix on GitHub">Fork</a>
+		<a class="github-button" href="https://github.com/ganey/CSSPrefix/fork" data-icon="octicon-repo-forked" data-style="mega" aria-label="Fork italic/CSSPrefix on GitHub">Fork</a>
 		<!-- GitHub Issue -->
-		<a class="github-button" href="https://github.com/italic/CSSPrefix/issues" data-icon="octicon-issue-opened" data-style="mega" aria-label="Issue italic/CSSPrefix on GitHub">Issue</a>
+		<a class="github-button" href="https://github.com/ganey/CSSPrefix/issues" data-icon="octicon-issue-opened" data-style="mega" aria-label="Issue italic/CSSPrefix on GitHub">Issue</a>
 		<br>
 		<br>
-		<small><a href="http://www.italic.fr" target="_blank">This is yet another <em>italic</em> production.</a></small>
+		<small>Updated from original at <a href="https://github.com/italic/CSSPrefix" target="_blank"><em>italic</em></a></small>
 		<br>
 		<br>
 	</div><!-- /.container -->
 
 	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
 
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-79VJ3RMRBG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-	  ga('create', 'UA-45563591-1', 'css-prefix.com');
-	  ga('send', 'pageview');
-
-	</script>
+  gtag('config', 'G-79VJ3RMRBG');
+</script>
 
 </body>
 </html>
